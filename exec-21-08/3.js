@@ -1,7 +1,6 @@
 /*
 03. Tendo um número como mais de um algarismo, crie uma função que
 apresente o inverso desse número, por exemplo: 100 (entrada) saída 001
-
 */
 
 const readline = require('readline-sync');

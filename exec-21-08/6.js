@@ -21,8 +21,6 @@ let usuarios = [{
     habilidades: ['Java', 'Ruby on Rails', 'Laravel']
     }];
 
-
-
 function main() {
     for (const usuario of usuarios) {
         const habilidades = usuario.habilidades.join(', ');
