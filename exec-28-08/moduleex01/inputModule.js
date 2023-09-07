@@ -7,4 +7,4 @@ function getUserInput() {
     return { name, salary };
   }
   
-  module.exports.getUserInput = getUserInput ;
+  module.exports.getUserInput = getUserInput;

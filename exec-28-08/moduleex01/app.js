@@ -23,8 +23,6 @@ for (let i = 0; i < numberOfEmployees; i++) {
   console.log('\n---\n');
 }
 
-console.log('Resultados:\n');
-
 employees.forEach((employee, index) => {
   console.log(`Resultado para o Funcionário ${index + 1}:\n`);
   displayResults(employee);
