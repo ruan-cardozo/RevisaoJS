@@ -1,2 +1,0 @@
-# RevisaoJS
-Desenvolvendo com JS
