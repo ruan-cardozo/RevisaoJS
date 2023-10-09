@@ -16,7 +16,7 @@ let custoConsumidor;
 
 function entradaDeDados() {
     // custoFabrica = parseFloat(readline.question('Digite o preço de fábrica: '));
-    custoFabrica = 10000;
+    custoFabrica = 40000;
 }
 function calcularValorDistribuidor() {
     custoFabricaDistribuidora = custoFabrica * 28 / 100;
