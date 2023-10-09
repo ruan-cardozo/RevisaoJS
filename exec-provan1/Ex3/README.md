@@ -6,12 +6,3 @@ Menos de 18,5- abaixo do peso
 30 a 39,9-obeso
 +de 40 - muito obeso (também conhecido como obeso morbido)
 Formula: IMC = PESO (ALTURA ALTURA)
-
-## Entrada de dados
-    1 -> Peso
-    2 > Altura
-
-## Processamento
-    Fazer o calculo e tratar as exeções conforme o imc da pessoa.
-
-## Saida de dados referente ao imc da pessoa
