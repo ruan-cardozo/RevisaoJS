@@ -1,22 +1,27 @@
-/*
-        Tipo 1 - ervas daninhas R$ 60,00 por ha
-        Tipo 2 - gafanhotos R$ 110,00 por ha
-        Tipo 3- broca RS 160,00 por ha
-        Tipo 4 - todos acima R$ 300,00 por ha
-*/
+const r = require('readline-sync');
 
-let area = 800;
-let tipo = 1;
+let area = 800; // Área a ser pulverizada (exemplo com 800 ha)
+let tipo = 1;  // Tipo de pulverização (exemplo com tipo 1)
+
 let valorTipo;
 let valorTotal;
 let valorAPagar;
 let valorAcima900;
 let desconto900;
 
-function tipoPulverização() {
+function entradaDeDados() {
+    area = parseInt(r.question('Digite a área: '));
+    console.log('Tipo 1 - ervas daninhas R$ 60,00 por ha');
+    console.log('Tipo 2 - gafanhotos R$ 110,00 por ha');
+    console.log('Tipo 3- broca RS 160,00 por ha');
+    console.log('Tipo 4 - todos acima R$ 300,00 por ha');
+    tipo = parseInt(r.question('Digite o tipo de pulverização: '));
+}
+
+function tipoPulverizacao() {
     switch (tipo) {
         case 1:
-            valorTipo = 60; 
+            valorTipo = 60;
             break;
         case 2:
             valorTipo = 110;
@@ -30,37 +35,37 @@ function tipoPulverização() {
         default:
             console.log('Tipo inexistente');
             break;
-    }  
+    }
 }
 
-function validarDescontos() {
+function calcularDescontos() {
+    valorTotal = area * valorTipo;
+
     if (area > 1100) {
-        valorTotal = area * valorTipo;
-        valorAPagar = valorTotal / 100 * 6;
-    } else{
-        valorTotal = area * valorTipo;
+        valorAPagar = valorTotal - (valorTotal * 0.06); // Desconto de 6% se a área for maior que 1100 ha
+    } else {
+        valorAPagar = valorTotal;
     }
 
-    if(valorTotal > 900){
-        valorAcima900 = area - 900;
-        desconto900 = valorAcima900 / 100 * 10;
-        valorAPagar = valorTotal - desconto900;
-    } else {
-        valorTotal = area * valorTipo;
+    if (valorTotal > 900) {
+        valorAcima900 = valorTotal - 900;
+        desconto900 = valorAcima900 * 0.1; // Desconto de 10% sobre o valor que ultrapassar 900
+        valorAPagar -= desconto900;
     }
 }
 
 function saidaDeDados() {
     console.log(`O tipo de pulverização escolhido foi: ${tipo}`);
-    console.log(`A quantidade de área a ser pulverizada é: ${area}`);
-    console.log(`O valor total sem descontos: ${valorTotal}`);
-    console.log(`O valor total a pagar vai ser: ${valorAPagar}`);
-    console.log(`O valor do desconto aplicado acima de 900: ${desconto900}`);
+    console.log(`A quantidade de área a ser pulverizada é: ${area} ha`);
+    console.log(`O valor total sem descontos: R$ ${valorTotal.toFixed(2)}`);
+    console.log(`O valor a pagar com descontos: R$ ${valorAPagar.toFixed(2)}`);
+    console.log(`O valor do desconto aplicado acima de R$ 900,00: R$ ${desconto900.toFixed(2)}`);
 }
 
-function main(){
-    tipoPulverização();
-    validarDescontos();
+function main() {
+    entradaDeDados();
+    tipoPulverizacao();
+    calcularDescontos();
     saidaDeDados();
 }
 
