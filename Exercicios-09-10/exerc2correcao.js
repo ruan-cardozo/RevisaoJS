@@ -1,5 +1,5 @@
-import entrdados from 'readline-sync' 
-import connect from './bd.js'
+const {entrdados} = require('readline-sync');
+const {connect} = require('mysql2');
 
 const PARAMETRO_CONVERSOR = 1000
 

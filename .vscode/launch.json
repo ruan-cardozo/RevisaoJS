@@ -1,6 +1,7 @@
 {
   "version": "0.2.0",
   "configurations": [
+
     {
       "type": "node",
       "request": "launch",
@@ -17,8 +18,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": false,
-      "cwd": "/home/ruan/desktop/Faculdade/serverSide/Repository/javascript/collageJS/exercicios/logic-training/1610",
-      "program": "/home/ruan/desktop/Faculdade/serverSide/Repository/javascript/collageJS/exercicios/logic-training/1610/build/Debug/outDebug",
+      "cwd": "/home/ruan/desktop/Faculdade/serverSide/Repository/javascript/collageJS/exercicios/logic-training/Exercicios-lista",
+      "program": "/home/ruan/desktop/Faculdade/serverSide/Repository/javascript/collageJS/exercicios/logic-training/Exercicios-lista/a.out",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
