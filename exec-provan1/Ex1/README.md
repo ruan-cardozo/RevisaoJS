@@ -1,0 +1,1 @@
+1. Supondo que o percentual do distribuidor é de 28% e os impostos de 45%, escreva um programa para ler o custo de fábrica de um carro, calcular e escrever o custo final ao consumidor (1,5). 

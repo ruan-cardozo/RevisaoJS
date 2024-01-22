@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "mysql2": "^3.6.2",
+    "readline-sync": "^1.4.10",
+    "type": "module"
+  }
+}
